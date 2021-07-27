@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<p><h1>New Article</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form | crispy }}
+        <p></p>
+        <a class="btn btn-light" onclick="history.back()">Back</a> <button class="btn btn-light">Save</button>
+    </form></p>
+{% endblock content %}

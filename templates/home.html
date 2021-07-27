@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock title %}
+
+{% block content %}
+<p>
+<div class="badge bg-secondary text-wrap p-1">
+    <h1 class="display-1">Newspaper App</h1>
+    <p class="lead">A Newspaper website built with Django and Bootstrap</p>
+    <p class="lead">
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="p-1 col-md-auto">
+                <a class="btn btn-light btn-lg" href="{% url 'article_create' %}">Create Article</a>
+            </div>
+            <div class="p-1 col-md-auto">
+                <a class="btn btn-light btn-lg" href="{% url 'article_list' %}">View All Articles</a>
+            </div>
+        </div>
+    </div>
+    </p>
+</div>
+</p>
+{% endblock content %}
